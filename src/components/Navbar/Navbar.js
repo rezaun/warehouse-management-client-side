@@ -18,7 +18,7 @@ function Navbar() {
                                 <CustomLink className="nav-link active" aria-current="page" to="/">Home</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link" to="/about">Features</CustomLink>
+                                <CustomLink className="nav-link" to="/blog">Blog</CustomLink>
                             </li>
                             <li className="nav-item">
                                 <CustomLink className="nav-link" to="/contact">Pricing</CustomLink>

@@ -7,7 +7,7 @@ const Coundown = () => {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-4 col-xs-12 col-md-4">
+                    <div className="col-sm-4 col-xs-12 col-md-4 py-5">
                         <h1 className='text-white text-center'><CountUp
                             start={50}
                             end={2500}
@@ -19,10 +19,10 @@ const Coundown = () => {
                                 </div>
                             )}
                         </CountUp>
-                        Total Product
+                        <span className='text-warning'>Total Product</span>
                         </h1>
                     </div>
-                    <div className="col-sm-4 col-xs-12 col-md-4">
+                    <div className="col-sm-4 col-xs-12 col-md-4 py-5">
                        <h1  className='text-white text-center'>
                        <CountUp
                             start={50}
@@ -36,10 +36,10 @@ const Coundown = () => {
                                 </div>
                             )}
                         </CountUp>
-                        Total Customer
+                        <span className='text-warning'>Total Customer</span>
                        </h1>
                     </div>
-                    <div className="col-sm-4 col-xs-12 col-md-4">
+                    <div className="col-sm-4 col-xs-12 col-md-4 py-5">
                     <h1  className='text-white text-center'>
                        <CountUp
                             start={5}
@@ -53,7 +53,7 @@ const Coundown = () => {
                                 </div>
                             )}
                         </CountUp>
-                        Total Outlet
+                        <span className='text-warning'>Total Outlet</span>
 
                        </h1>
                     </div>
