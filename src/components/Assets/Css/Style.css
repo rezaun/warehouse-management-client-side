@@ -22,4 +22,15 @@ ul{
 /* Home page CSS */
 
 
-/* Fotoer CSS */
+/* Team Page */
+
+.singleImage img{
+    filter: grayscale(100%);
+    transition: 0.5s;
+   
+}
+.singleImage img:hover{
+    filter: grayscale(0%);
+}
+
+/* Footer CSS */

@@ -44,11 +44,11 @@ const Footer = () => {
                     </div>
 
                 </div>
-                <div className="lower-fotoer bg-secondary text-white py-2">
+                <div className="lower-footer bg-secondary text-white py-2">
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-6 col-xs-12 col-md-6">© 2020 mychoiceltd.com</div>
-                            <div className="col-sm-6 col-xs-12 col-md-6 text-right">
+                            <div className="col-sm-6 col-xs-12 col-md-6 text-end">
                                 <span className='px-1 '><Link className=' text-white' to=''><FaFacebookF /></Link></span>
                                 <span className='px-1'><Link className='mr-2 text-white' to=''><FaTwitter /></Link></span>
                                 <span className='px-1'><Link className='mr-2 text-white' to=''><FaLinkedinIn /></Link></span>
