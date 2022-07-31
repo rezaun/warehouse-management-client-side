@@ -1,6 +1,25 @@
+/* Common css */
+a{
+    color:#000;
+    text-decoration: none;
+}
+a:hover{
+    color: tomato;
+}
+ul li{
+    list-style: none;
+   
+}
+ul{
+    padding-left: 0;
+}
+
 /* Navbar CSS */
 .navbar-brand img{
     width: 70%;
 }
 
 /* Home page CSS */
+
+
+/* Fotoer CSS */

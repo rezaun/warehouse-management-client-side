@@ -1,10 +1,12 @@
 import React from 'react';
-import banner from '../../Assets/Images/banner/banner.jpg'
+import Banner from './Banner/Banner';
+import Footer from './Footer/Footer';
 
 const Home = () => {
     return (
         <>
-           <img src={banner} alt="" />
+           <Banner/>
+           <Footer/>
         </>
     );
 };
