@@ -9,8 +9,7 @@ const Home = () => {
         <>
            <Banner/>
            <Team/>
-           <Coundown/>
-           <Footer/>
+           <Coundown/>          
         </>
     );
 };
