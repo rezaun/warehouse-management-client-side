@@ -33,6 +33,22 @@ ul{
     filter: grayscale(0%);
 }
 
+/* Countdown  css */
+h1 span{
+    font-size: 40px;
+}
 /* Footer CSS */
+.social-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.social-wrapper a{
+    font-size: 20px;
+    
+   
+}
+.social-wrapper span a:hover{
+    color: tomato;
+}
 /* Not Found */
 

@@ -10,7 +10,7 @@ const Coundown = () => {
                     <div className="col-sm-4 col-xs-12 col-md-4 py-5">
                         <h1 className='text-white text-center'><CountUp
                             start={50}
-                            end={2500}
+                            end={5500}
                             duration={2.75}
                             separator=" ">
                             {({ countUpRef, start }) => (
@@ -19,14 +19,14 @@ const Coundown = () => {
                                 </div>
                             )}
                         </CountUp>
-                        <span className='text-warning'>Total Product</span>
+                        <span className='text-violet-50'>Total Product</span>
                         </h1>
                     </div>
                     <div className="col-sm-4 col-xs-12 col-md-4 py-5">
-                       <h1  className='text-white text-center'>
+                       <h1 className='text-white text-center'>
                        <CountUp
                             start={50}
-                            end={5050}
+                            end={2050}
                             duration={2.75}
                             separator=" ">
                             {({ countUpRef, start }) => (
@@ -36,7 +36,7 @@ const Coundown = () => {
                                 </div>
                             )}
                         </CountUp>
-                        <span className='text-warning'>Total Customer</span>
+                        <span className='text-violet-50'>Total Customer</span>
                        </h1>
                     </div>
                     <div className="col-sm-4 col-xs-12 col-md-4 py-5">
@@ -53,7 +53,7 @@ const Coundown = () => {
                                 </div>
                             )}
                         </CountUp>
-                        <span className='text-warning'>Total Outlet</span>
+                        <span className='text-violet-50'>Total Outlet</span>
 
                        </h1>
                     </div>

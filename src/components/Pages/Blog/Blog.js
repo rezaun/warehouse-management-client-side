@@ -7,12 +7,12 @@ const Blog = () => {
     return (
         <div className='container'>
             <div className="row">
-                <h4 className='pt-5 text-center my-3 text-primary'>1. Difference between Javascript and Nodejs</h4>
-                <div className="col-sm-6">
+                <h4 className='pt-5 text-center my-3 text-primary fs-1'>1. Difference between Javascript and Nodejs</h4>
+                <div className="col-sm-8  offset-md-2 offset-sm-2 col-xs-12 col-md-8 py-4 text-center">
                     <img className='img-fluid' src={jsvsnode} alt="" />
                 </div>
-                <div className="col-sm-6">
-                    <table className='table table-bordered border-primary '>
+                <div className="col-sm-12 col-xs-12 col-md-12">
+                    <table className='table table-bordered border-primary table-hover'>
                         <tbody>
                         <tr>
                             <th>Javascript</th>
@@ -42,23 +42,23 @@ const Blog = () => {
                     </table>
                    
                 </div>
-                <h4 className='pt-5 text-center my-3 text-primary'>2. When should you use nodejs and when should you use mongodb</h4>
-                <div className="col-sm-6">
-                    <img className='img-fluid' src={MongoDB_NodeJS} alt="" />
+                <h4 className='pt-5 text-center my-3 text-primary fs-1'>2. When should you use nodejs and when should you use mongodb</h4>
+                <div className="col-sm-6 col-xs-12 col-md-6">
+                    <img className='img-fluid text-center' src={MongoDB_NodeJS} alt="" />
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6 col-xs-12 col-md-6">
                 <h6>Node Js:</h6>
                     <p>Node Js is a Javascript Runtime Environment.Basially we are using node js for server side Developement.We are for  connect database client side to server side when we are using node js.</p>
                     <h6>Mongodb:</h6>
                     <p>MongoDB makes it easy for developers to store structured or unstructured data.Mongodb is Stored Data in Json Format.MongoDB can also handle high volume and can scale both vertically or horizontally to accommodate large data loads.</p>
                    
                 </div>
-                <h4 className='pt-5 text-center my-3 text-primary'>3. Differences between sql and nosql databases.</h4>
-                <div className="col-sm-6">
+                <h2 className='pt-5 text-center my-3 fs-1 text-primary'>3. Differences between sql and nosql databases.</h2>
+                <div className="col-sm-8 col-xs-12 col-md-8  offset-md-2 offset-sm-2 py-4">
                     <img className='img-fluid' src={sqlnosql} alt="" />
                 </div>
-                <div className="col-sm-6">
-                    <table className='table table-bordered border-primary '>
+                <div className="col-sm-12 col-xs-12 col-md-12">
+                    <table className='table table-bordered border-primary table-hover'>
                         <tbody>
                         <tr>
                             <th>SQL</th>

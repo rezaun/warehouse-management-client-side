@@ -44,16 +44,16 @@ const Footer = () => {
                     </div>
 
                 </div>
-                <div className="lower-footer bg-secondary text-white py-2">
+                <div className="lower-footer bg-secondary text-white mt-5 pt-2">
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-6 col-xs-12 col-md-6">© 2020 mychoiceltd.com</div>
-                            <div className="col-sm-6 col-xs-12 col-md-6 text-end">
-                                <span className='px-1 '><Link className=' text-white' to=''><FaFacebookF /></Link></span>
-                                <span className='px-1'><Link className='mr-2 text-white' to=''><FaTwitter /></Link></span>
-                                <span className='px-1'><Link className='mr-2 text-white' to=''><FaLinkedinIn /></Link></span>
-                                <span className='px-1'> <Link className='mr-2 text-white' to=''><FaYoutubeSquare /></Link></span>
-                                <span className='px-1'><Link className='mr-2 text-white' to=''><FaPinterestP /></Link></span>
+                            <div className="col-sm-6 col-xs-12 col-md-6 text-pink-50">© 2020 mychoiceltd.com</div>
+                            <div className="col-sm-6 col-xs-12 col-md-6 text-end social-wrapper">
+                                <span className='px-1 '><a className=' text-white' href="https://www.facebook.com/" target='_blank'><FaFacebookF /></a></span>
+                                <span className='px-1'><a className='mr-2 text-white' href="https://www.facebook.com/" target='_blank'><FaTwitter /></a></span>
+                                <span className='px-1'><a className='mr-2 text-white' href="https://www.facebook.com/" target='_blank'><FaLinkedinIn /></a></span>
+                                <span className='px-1'> <a className='mr-2 text-white' href="https://www.facebook.com/" target='_blank'><FaYoutubeSquare /></a></span>
+                                <span className='px-1'><a className='mr-2 text-white' href="https://www.facebook.com/" target='_blank'><FaPinterestP /></a></span>
                             </div>
                         </div>
                     </div>
