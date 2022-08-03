@@ -5,6 +5,8 @@ import './components/Assets/Css/Style.css'
 import Blog from "./components/Pages/Blog/Blog";
 import NotFound from "./components/Pages/NotFound/NotFound";
 import Footer from "./components/Pages/Home/Footer/Footer";
+import RequireAuth from "./components/Auth/RequireAuth/RequireAuth";
+import Login from "./components/Auth/Login/Login";
 
 function App() {
   return (
@@ -13,8 +15,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
-        <Route path="/blog" element={<Blog/>}></Route>
+        <Route path="/blog" element={
+        <RequireAuth>
+          <Blog/>
+        </RequireAuth>
+        }></Route>
         <Route path="*" element={<NotFound/>}></Route>
+        <Route path="login" element={<Login/>}></Route>
       </Routes>
       <Footer/>
       
