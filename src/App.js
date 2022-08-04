@@ -7,6 +7,7 @@ import NotFound from "./components/Pages/NotFound/NotFound";
 import Footer from "./components/Pages/Home/Footer/Footer";
 import RequireAuth from "./components/Auth/RequireAuth/RequireAuth";
 import Login from "./components/Auth/Login/Login";
+import Registration from "./components/Pages/Registration/Registration";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         </RequireAuth>
         }></Route>
         <Route path="*" element={<NotFound/>}></Route>
-        <Route path="login" element={<Login/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/registration" element={<Registration/>}></Route>
       </Routes>
       <Footer/>
       

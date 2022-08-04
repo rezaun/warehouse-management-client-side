@@ -2,8 +2,13 @@ import React from 'react'
 import { Routes, Route, Link } from "react-router-dom";
 import CustomLink from '../Pages/Shared/CustomLink/CustomLink';
 import logo from '../Assets/Images/logo/logo.png'
+import { signOut } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from '../../firebase.init';
+import { FaUserAlt } from 'react-icons/fa';
 
 function Navbar() {
+    const [user] = useAuthState(auth);
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,9 +29,18 @@ function Navbar() {
                                 <CustomLink className="nav-link" to="/contact">Pricing</CustomLink>
                             </li>
                         </ul>
-                        <span className="navbar-text">
-                            Navbar text with an inline element
-                        </span>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className='loginUser px-2 pt-2'>{user?.email}</li>
+                            <li class="nav-item">
+                                {user ? (
+                                     <button className='btn btn-warning' onClick={() => signOut(auth)}> <FaUserAlt className='mr-2'/>  Logout</button>
+                                ) : (
+                                     <CustomLink class="nav-link active" aria-current="page" to='/login'>Login</CustomLink>
+                                )}
+                               
+                            </li>
+                                                   
+                        </ul>      
                     </div>
                 </div>
             </nav>

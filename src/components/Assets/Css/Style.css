@@ -48,7 +48,7 @@ h1 span{
    
 }
 .social-wrapper span a:hover{
-    color: tomato;
+    color: tomato !important;
 }
 /* Not Found */
 
