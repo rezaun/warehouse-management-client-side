@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { auth } from '../../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import register from '../../Assets/Images/Registration/Registration.jpg'
 
 const Registration = () => {
     const [userInfo, setUserInfo] = useState({
@@ -107,8 +108,13 @@ const Registration = () => {
         <>
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-12 col-xs-12 offset-md-4 col-md-4 my-5">
-                        <h2>Registration Here</h2>
+                    
+
+                    <div className="col-sm-8 col-xs-12  col-md-8 my-5">  
+                        <img src={register} alt="" />
+                    </div>                      
+                    <div className="col-sm-4 col-xs-12  col-md-4 my-5">                        
+                        <h2 className='text-center fs-2 mb-5 text-rose-700 '>Registration Here</h2>
                     <form onSubmit={handleLogin}>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -127,10 +133,10 @@ const Registration = () => {
                             {errors?.password && <p className='error-message'>{errors.password}</p>}
                         </div>
                        
-                        <button type="submit" class="btn btn-primary">Sign up</button>
+                        <button type="submit" class="btn btn-warning">Sign up</button>
                         <ToastContainer />
                         <div class="mb-3 ">
-                            New Here? Please <Link to='/login'>Login</Link> Here.
+                            New Here? Please <Link to='/login'><span className='text-red-600 font-bold hover:text-orange-600 '>Login </span></Link> Here.
                         </div>
                     </form>                    
 
