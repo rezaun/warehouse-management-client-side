@@ -1,15 +1,16 @@
 import React from 'react';
 import Banner from './Banner/Banner';
 import Coundown from './Coundown/Coundown';
-import Footer from './Footer/Footer';
+import Products from './Products/Products';
 import Team from './Team/Team';
 
 const Home = () => {
     return (
-        <>
-           <Banner/>
-           <Team/>
-           <Coundown/>          
+        <>            
+            <Banner/>           
+            <Products/>
+            <Team/>
+            <Coundown/>          
         </>
     );
 };

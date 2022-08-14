@@ -29,13 +29,13 @@ function Navbar() {
                                 <CustomLink className="nav-link" to="/contact">Pricing</CustomLink>
                             </li>
                         </ul>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className='loginUser px-2 pt-2'>{user?.email}</li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 {user ? (
                                      <button className='btn btn-warning' onClick={() => signOut(auth)}> <FaUserAlt className='mr-2'/>  Logout</button>
                                 ) : (
-                                     <CustomLink class="nav-link active" aria-current="page" to='/login'>Login</CustomLink>
+                                     <CustomLink className="nav-link active" aria-current="page" to='/login'>Login</CustomLink>
                                 )}
                                
                             </li>
