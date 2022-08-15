@@ -12,7 +12,7 @@ const ProductDetails = () => {
 
         fetch(url)
         .then(res =>res.json())
-        .then(data =>console.log(data))
+        .then(data =>setProduct(data))
     }, [])
 
     return (

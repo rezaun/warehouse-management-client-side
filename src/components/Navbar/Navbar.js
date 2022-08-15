@@ -26,7 +26,7 @@ function Navbar() {
                                 <CustomLink className="nav-link" to="/blog">Blog</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link" to="/contact">Pricing</CustomLink>
+                                <CustomLink className="nav-link" to="/inventory">Inventory</CustomLink>
                             </li>
                         </ul>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
