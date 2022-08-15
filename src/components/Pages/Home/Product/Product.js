@@ -11,17 +11,17 @@ const Product = ({ product }) => {
     }
     return (
         <>
-            <div className='col-sm-4 col-md-4 col-xs-12'>
-                <div className="productContainer">
+            <div className='singleProduct col-sm-4 col-md-4 col-xs-12 rounded mb-5'>
+                <div className="border border-sky-500 p-5">
                     <img className='w-100' src={image} alt={name} />
-                    <h3>{name}</h3>
-                    <h5>Price: ${price}</h5>
-                    <p>Quantity: {quantity}</p>
-                    <p>supplier: {supplier}</p>
-                    <p>phone: {phone}</p>
-                    <p>Email: {email}</p>
-                    <p>{description}</p>
-                    <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-primary'>Book: {name}</button>
+                    <h1 className='fs-3'>{name}</h1>
+                    <h5><b>Price: </b> ${price}</h5>
+                    <p><b>Quantity:</b> {quantity}</p>
+                    <p><b>Supplier:</b> {supplier}</p>
+                    <p><b>Phone:</b> {phone}</p>
+                    <p><b>Email:</b> {email}</p>
+                    <p className='mt-1'><b>Description: </b>{description.slice(1,193)}</p>
+                    <button onClick={() => navigateToServiceDetail(_id)} className='btn btn-primary'>Update: {name}</button>
 
                 </div>
             </div>

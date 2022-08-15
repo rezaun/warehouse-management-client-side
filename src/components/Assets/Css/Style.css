@@ -51,4 +51,11 @@ h1 span{
     color: tomato !important;
 }
 /* Not Found */
-
+/* Product page css */
+.singleProduct img{
+    transition: transform .2s;
+    width: 100%;
+}
+.singleProduct img:hover{
+    transform: scale(0.8);
+}
