@@ -9,14 +9,14 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-3 col-md-3 col-x-12">
-                            <h4 className='fs-2 mb-3 text-rose-700'>My Account</h4>
+                            <h4 className='fs-5 mb-3 uppercase text-rose-700'>My Account</h4>
                             <ul>
                                 <li><Link to="">Sign in</Link></li>
                                 <li><Link to="">Create Account</Link></li>
                             </ul>
                         </div>
                         <div className="col-sm-3 col-md-3 col-x-12">
-                            <h4 className='fs-2 mb-3 text-rose-700'>About Us</h4>
+                            <h4 className='fs-5 mb-3 uppercase text-rose-700'>About Us</h4>
                             <ul>
                                 <li><Link to="">About Us</Link> </li>
                                 <li><Link to="">Contact Us</Link> </li>
@@ -26,7 +26,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-sm-3 col-md-3 col-x-12">
-                            <h4 className='fs-2 mb-3 text-rose-700'>Customer Service</h4>
+                            <h4 className='fs-5 mb-3 uppercase text-rose-700'>Customer Service</h4>
                             <ul>
                                 <li><Link to="">About your order</Link></li>
                                 <li><Link to="">Wishlist</Link></li>
@@ -35,7 +35,7 @@ const Footer = () => {
 
                         </div>
                         <div className="col-sm-3 col-md-3 col-x-12">
-                            <h4 className='fs-2 mb-3 text-rose-700'>Contact Us</h4>
+                            <h4 className='fs-5 mb-3 uppercase text-rose-700'>Contact Us</h4>
                             <p>330, Tangail House, Dhaka- 1207.
                                 Mon-Sun 9.00 - 18.00
                                 info@mychoiceltd.com</p>
