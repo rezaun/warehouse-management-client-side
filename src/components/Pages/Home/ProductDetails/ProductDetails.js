@@ -27,7 +27,8 @@ const ProductDetails = () => {
                     <p><b>Phone:</b> {product.phone}</p>
                     <p><b>Email:</b> {product.email}</p>
                     <p className='mt-1'><b>Description: </b>{product.description}</p>
-                    <button className='btn btn-primary'>Update: {product.name}</button>
+                    <button className='btn btn-primary mx-5 my-3'>Deliver</button>
+                    <button className='btn btn-success ml-5'>Manage Item</button>
 
                     <form>
                         <div class="input-group my-3">
