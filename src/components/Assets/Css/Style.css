@@ -59,3 +59,10 @@ h1 span{
 .singleProduct img:hover{
     transform: scale(0.8);
 }
+
+.customMenuWwrap{
+    display: flex;
+}
+.customMenu{    
+    margin-right: 5px;
+}

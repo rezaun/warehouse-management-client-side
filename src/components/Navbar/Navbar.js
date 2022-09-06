@@ -31,7 +31,16 @@ function Navbar() {
                         </ul>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className='loginUser px-2 pt-2'>{user?.email}</li>
-                            <li className="nav-item">
+                            <li className="nav-item customMenuWwrap">
+                                {
+                                    user && <>                                    
+                                        <CustomLink className="nav-link customMenu" to="/addproduct">Add Product</CustomLink>
+                                        <CustomLink className="nav-link customMenu" to="/manage">Manage Product</CustomLink>
+                                    </>
+                                    
+                                }
+                                </li>
+                                 <li className="nav-item">
                                 {user ? (
                                      <button className='btn btn-warning' onClick={() => signOut(auth)}> <FaUserAlt className='mr-2'/>  Logout</button>
                                 ) : (
