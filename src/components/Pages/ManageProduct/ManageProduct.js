@@ -22,16 +22,26 @@ const ManageProduct = () => {
         }
     }
     return (
-        <div className='container'>
-           <div className="row">
-           <h2>Manage  Products</h2>
+        <div className='container'>    
+        <div className="row">       
             {
-                products.map(product => <div key={product._id}>
-                    <h6>{product.name} <button onClick={() => handleDelete(product._id)}>X</button></h6>
-
+                products.map(product => <div className="col-sm-4 " key={product._id}>
+                    
+                    <div className='m-2 border border-success p-3 rounded '>
+                    <img className='w-50' src={product.image} alt={product.name} />
+                    <h1 className='fs-3 mb-2'>{product.name}</h1>
+                    <h5><b>Price: </b> ${product.price}</h5>
+                    <p><b>Quantity:</b> {product.quantity}</p>
+                    <p><b>Supplier:</b> {product.supplier}</p>
+                    <p><b>Phone:</b> {product.phone}</p>
+                    <p><b>Email:</b> {product.email}</p>
+                    <button className="btn btn-primary mr-2">Save Changes</button>
+                    <button className='btn btn-info' onClick={() => handleDelete(product._id)}>Delete</button>  
+                    </div>
+                    
                 </div>)
-            }
-           </div>
+            }          
+        </div>
         </div>
     );
 };
