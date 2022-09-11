@@ -19,7 +19,7 @@ const Product = ({ product }) => {
                     <p><b>Supplier:</b> {supplier}</p>
                     <p><b>Phone:</b> {phone}</p>
                     <p><b>Email:</b> {email}</p>
-                    <p className='mt-1'><b>Description: </b>{description.slice(1,193)}</p>
+                    <p className='mt-1'><b>Description: </b>{description.slice(0,193)}</p>
                     <button onClick={() => navigateToProductDetails(_id)} className='btn btn-primary'>Update: {name}</button>
 
                 </div>

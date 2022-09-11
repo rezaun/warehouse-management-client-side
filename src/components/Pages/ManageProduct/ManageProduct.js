@@ -35,7 +35,7 @@ const ManageProduct = () => {
                     <p><b>Supplier:</b> {product.supplier}</p>
                     <p><b>Phone:</b> {product.phone}</p>
                     <p><b>Email:</b> {product.email}</p>
-                    <p className='mt-1'><b>Description: </b>{product.description}</p>
+                    <p className='mt-1'><b>Description: </b>{product.description.slice(0,20)}</p>
                     <button className="btn btn-primary mr-2">Save Changes</button>
                     <button className='btn btn-info' onClick={() => handleDelete(product._id)}>Delete</button>  
                     </div>

@@ -36,6 +36,7 @@ function Navbar() {
                                     user && <>                                    
                                         <CustomLink className="nav-link customMenu" to="/addproduct">Add Product</CustomLink>
                                         <CustomLink className="nav-link customMenu" to="/manage">Manage Product</CustomLink>
+                                        <CustomLink className="nav-link customMenu" to="/myproducts">My Products</CustomLink>
                                     </>
                                     
                                 }

@@ -12,6 +12,7 @@ import Inventory from "./components/Pages/Inventory/Inventory";
 import ProductDetails from "./components/Pages/Home/ProductDetails/ProductDetails";
 import AddProducts from "./components/Pages/AddProducts/AddProducts";
 import ManageProduct from "./components/Pages/ManageProduct/ManageProduct";
+import MyProducts from "./components/Pages/MyProducts/MyProducts";
 
 function App() {
   return (
@@ -33,6 +34,11 @@ function App() {
         <Route path="/manage" element={
         <RequireAuth>
           <ManageProduct/>
+          </RequireAuth>
+        }></Route>
+        <Route path="/myproducts" element={
+        <RequireAuth>
+          <MyProducts/>
           </RequireAuth>
         }></Route>
         <Route path="/inventory" element={<Inventory/>}></Route>
