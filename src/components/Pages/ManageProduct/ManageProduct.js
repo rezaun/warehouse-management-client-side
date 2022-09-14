@@ -16,11 +16,11 @@ const ManageProduct = () => {
                 console.log(data);
                 const remaining = products.filter(product => product._id !== id);
                 setProducts(remaining);
-
             })
 
         }
     }
+    
     return (
         <div className='container'>    
         <div className="row">       

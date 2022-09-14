@@ -6,13 +6,59 @@ import { useParams } from 'react-router-dom';
 const ProductDetails = () => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
-
+    const [update, setUpdate] = useState(false);
+    
+    console.log(product);
     useEffect(() => {
         const url = `http://localhost:5000/product/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
-    }, [id])
+    }, [id, update]);
+
+    const ProductDeliver =() =>{
+        const addedQuantity = parseInt(product.quantity) - 1;
+        // handleQuantity(id, addedQuantity);
+        console.log(addedQuantity)
+        const path = `http://localhost:5000/updatequantity/${id}`
+        fetch(path, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ addedQuantity })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    setUpdate(!update);
+                }
+                // console.log(data);
+            })
+    }
+
+    const handleAddQuantities = e => {
+        e.preventDefault();
+         const addedQuantity = parseInt(product.quantity) + parseInt(e.target.quantity.value);
+        // handleQuantity(id, addedQuantity);
+        console.log(parseInt(e.target.quantity.value));
+        const path = `http://localhost:5000/updatequantity/${id}`
+        fetch(path, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ addedQuantity })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    setUpdate(!update);                    
+                }
+                console.log(data);
+            })        
+        e.target.reset()
+    }
     //console.log(id, product);
 
     return (
@@ -27,13 +73,13 @@ const ProductDetails = () => {
                     <p><b>Phone:</b> {product.phone}</p>
                     <p><b>Email:</b> {product.email}</p>
                     <p className='mt-1'><b>Description: </b>{product.description}</p>
-                    <button className='btn btn-primary mx-5 my-3'>Deliver</button>
+                    <button className='btn btn-primary mx-5 my-3' onClick={ProductDeliver}>Deliver</button>
                     <button className='btn btn-success ml-5'>Manage Item</button>
 
-                    <form>
+                    <form onSubmit={handleAddQuantities}>
                         <div class="input-group my-3">
-                            <input type="text" class="form-control" placeholder="Quantity"/>
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Re Stock</button>
+                            <input type="text" name='quantity' class="form-control" placeholder="Quantity"/>
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Re Stock</button>
                         </div>
                     </form>
 
