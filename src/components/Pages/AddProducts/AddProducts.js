@@ -5,7 +5,7 @@ const AddProducts = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url =`http://localhost:5000/product`;
+        const url =`https://warehouse-management-server-side.vercel.app/product`;
         fetch(url, {
             method : 'POST',
             headers: {
