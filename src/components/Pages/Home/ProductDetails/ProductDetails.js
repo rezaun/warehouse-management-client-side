@@ -10,7 +10,7 @@ const ProductDetails = () => {
     
     console.log(product);
     useEffect(() => {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://warehouse-management-server-side.vercel.app/product/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -20,7 +20,7 @@ const ProductDetails = () => {
         const addedQuantity = parseInt(product.quantity) - 1;
         // handleQuantity(id, addedQuantity);
         console.log(addedQuantity)
-        const path = `http://localhost:5000/updatequantity/${id}`
+        const path = `https://warehouse-management-server-side.vercel.app/updatequantity/${id}`
         fetch(path, {
             method: 'PUT',
             headers: {
@@ -42,21 +42,26 @@ const ProductDetails = () => {
          const addedQuantity = parseInt(product.quantity) + parseInt(e.target.quantity.value);
         // handleQuantity(id, addedQuantity);
         console.log(parseInt(e.target.quantity.value));
-        const path = `http://localhost:5000/updatequantity/${id}`
-        fetch(path, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({ addedQuantity })
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount) {
-                    setUpdate(!update);                    
-                }
-                console.log(data);
-            })        
+        if(addedQuantity){
+            const path = `https://warehouse-management-server-side.vercel.app/updatequantity/${id}`
+            fetch(path, {
+                method: 'PUT',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({ addedQuantity })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.modifiedCount) {
+                        setUpdate(!update);                    
+                    }
+                    console.log(data);
+                }) 
+        }else{
+            alert('please input a value');
+        }
+       
         e.target.reset()
     }
     //console.log(id, product);
